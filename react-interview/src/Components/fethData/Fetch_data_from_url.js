@@ -13,13 +13,12 @@ const Fetch_data_from_url = () => {
   // }, []);
 
   // using fetch
+  // fetch: Returns a Response object.
+  // .json(): Converts the Response object to JSON.
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response was not ok");
-        }
         return res.json();
       })
       .then((data) => setData(data))
