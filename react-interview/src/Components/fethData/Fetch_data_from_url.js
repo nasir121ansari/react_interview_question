@@ -1,17 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const Fetch_data_from_url = () => {
   const [data, setData] = useState([]);
-  axios
-    .get("https://jsonplaceholder.typicode.com/posts")
-    .then((res) => {
-      console.log(res.data);
-      setData(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+
+  // using axios
+  // useEffect(() => {
+  //   axios
+  //     .get("https://jsonplaceholder.typicode.com/posts")
+  //     .then((res) => setData(res.data))
+  //     .catch((err) => console.log(err));
+  // }, []);
+
+  // using fetch
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((data) => setData(data))
+      .catch((err) => console.log("Fetch error:", err));
+  }, []);
 
   //   return (
   //     <div className="text-center">
