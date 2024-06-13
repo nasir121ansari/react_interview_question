@@ -7,6 +7,7 @@ import { Counter_incr_decr } from "./Components/counter/Counter_incr_decr";
 import { Form } from "./Components/submitForm/Form";
 import { DataPassing } from "./Components/passData/DataPassing";
 import { ConextApi } from "./Components/contextApi/ConextApi";
+import { ToDOList } from "./Components/todoList/ToDOList";
 
 function Home() {
   return (
@@ -32,6 +33,9 @@ function Home() {
             Context api and useContext hooks to solve props drilling issu
           </Link>
         </li>
+        <li>
+          <Link to="/Todolist">Todo List</Link>
+        </li>
       </ol>
     </div>
   );
@@ -49,6 +53,7 @@ function App() {
           <Route path="/form" element={<Form />} />
           <Route path="/dataPassing" element={<DataPassing />} />
           <Route path="/contextApi" element={<ConextApi />} />
+          <Route path="/Todolist" element={<ToDOList />} />
         </Routes>
       </globalInfor.Provider>
     </Router>
