@@ -124,6 +124,27 @@ export const TheoeyQuestion = () => {
                     <p><strong>React.lazy:</strong> This function is used to dynamically import the MyComponent only when it is needed.</p>
                     <p><strong>Suspense:</strong> This component is used to wrap the lazy-loaded component and provide a fallback (e.g., a loading spinner) while the component is being loaded.</p>
                 </li>
+                <li>
+                    <strong> What is difference between useCallBack and useMemo?</strong>
+                    <p>Ans: </p>
+                    <p> The useCallback and useMemo hooks in React are both used to optimize performance by memoizing values or functions to avoid unnecessary re-renders.</p>
+                    <p><strong>useCallback:</strong> is used to memoize a function, i.e., it returns a memoized version of the callback function that only changes if one of the dependencies has changed.</p>
+                    <p><strong>useMemo:</strong> is used to memoize a value, i.e., it returns a memoized value that only changes if one of the dependencies has changed.</p>
+                </li>
+                <li>
+                    <strong>What is React Strict Mode?</strong>
+                    <p>Ans: </p>
+                    <p> React Strict Mode is a development tool provided by React to help identify potential problems in your application. It doesn't render any visible UI and doesn't affect your production build. Instead, it runs extra checks and warnings during development to help you write safer and more optimized code.</p>
+                    <p>Unsafe Lifecycles: Warns about the use of deprecated lifecycle methods that might lead to bugs.</p>
+                    <p>Legacy String Refs: Alerts if you use older, unsafe string ref API.</p>
+                    <p>Detecting Unexpected Side Effects: Intentionally double-invokes certain functions to ensure they are pure and do not have side effects.</p>
+                </li>
+                <li>
+                    <strong>What is React mixin?</strong>
+                    <p>Ans: </p>
+                    <p>
+                        In React, a mixin is a way to reuse code in multiple components. Mixins were more commonly used in earlier versions of React but have since been largely replaced by other patterns like higher-order components (HOCs) and hooks.</p>
+                </li>
             </ol>
         </div>
     )

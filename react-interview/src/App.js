@@ -10,6 +10,10 @@ import { ConextApi } from "./Components/contextApi/ConextApi";
 import { ToDOList } from "./Components/todoList/ToDOList";
 import { LifeCycle } from "./Components/lifeCyle/LifeCycle";
 import { TheoeyQuestion } from "./Components/Theory/TheoeyQuestion";
+import UseCallBackP from "./Components/useCallBack/UseCallBackP";
+import UseMemo from "./Components/useMemo/UseMemo";
+import Counter from "./Components/CustomHook/Counter";
+import CounterComponent from "./Components/UseReducer/CounterComponent";
 
 function Home() {
   return (
@@ -44,6 +48,18 @@ function Home() {
         <li>
           <Link to="/TheoeyQuestion">Theory Question</Link>
         </li>
+        <li>
+          <Link to="/UseCallBack">UseCallBack</Link>
+        </li>
+        <li>
+          <Link to="/UseMemo">UseMemo</Link>
+        </li>
+        <li>
+          <Link to="/CustomHook">CustomHook</Link>
+        </li>
+        <li>
+          <Link to="/UseReducerHook">CustomHook</Link>
+        </li>
       </ol>
     </div>
   );
@@ -64,6 +80,10 @@ function App() {
           <Route path="/Todolist" element={<ToDOList />} />
           <Route path="/LifeCyleMethod" element={<LifeCycle />} />
           <Route path="/TheoeyQuestion" element={<TheoeyQuestion />} />
+          <Route path="/UseCallBack" element={<UseCallBackP />} />
+          <Route path="/UseMemo" element={<UseMemo />} />
+          <Route path="/CustomHook" element={<Counter />} />
+          <Route path="/UseReducerHook" element={<CounterComponent />} />
         </Routes>
       </globalInfor.Provider>
     </Router>
