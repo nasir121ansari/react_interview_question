@@ -9,6 +9,7 @@ import { DataPassing } from "./Components/passData/DataPassing";
 import { ConextApi } from "./Components/contextApi/ConextApi";
 import { ToDOList } from "./Components/todoList/ToDOList";
 import { LifeCycle } from "./Components/lifeCyle/LifeCycle";
+import { TheoeyQuestion } from "./Components/Theory/TheoeyQuestion";
 
 function Home() {
   return (
@@ -40,6 +41,9 @@ function Home() {
         <li>
           <Link to="/LifeCyleMethod">Life Cycle Method</Link>
         </li>
+        <li>
+          <Link to="/TheoeyQuestion">Theory Question</Link>
+        </li>
       </ol>
     </div>
   );
@@ -59,6 +63,7 @@ function App() {
           <Route path="/contextApi" element={<ConextApi />} />
           <Route path="/Todolist" element={<ToDOList />} />
           <Route path="/LifeCyleMethod" element={<LifeCycle />} />
+          <Route path="/TheoeyQuestion" element={<TheoeyQuestion />} />
         </Routes>
       </globalInfor.Provider>
     </Router>
