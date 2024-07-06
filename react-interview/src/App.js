@@ -58,7 +58,7 @@ function Home() {
           <Link to="/CustomHook">CustomHook</Link>
         </li>
         <li>
-          <Link to="/UseReducerHook">CustomHook</Link>
+          <Link to="/UseReducerHook">UseReducerHook</Link>
         </li>
       </ol>
     </div>
