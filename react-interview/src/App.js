@@ -14,6 +14,7 @@ import UseCallBackP from "./Components/useCallBack/UseCallBackP";
 import UseMemo from "./Components/useMemo/UseMemo";
 import Counter from "./Components/CustomHook/Counter";
 import CounterComponent from "./Components/UseReducer/CounterComponent";
+import { TicTacToe } from "./Components/tic-tac-toe/TicTacToe";
 
 function Home() {
   return (
@@ -60,6 +61,9 @@ function Home() {
         <li>
           <Link to="/UseReducerHook">UseReducerHook</Link>
         </li>
+        <li>
+          <Link to="/TicTacToe">Tic-Tac-Toe</Link>
+        </li>
       </ol>
     </div>
   );
@@ -84,6 +88,7 @@ function App() {
           <Route path="/UseMemo" element={<UseMemo />} />
           <Route path="/CustomHook" element={<Counter />} />
           <Route path="/UseReducerHook" element={<CounterComponent />} />
+          <Route path="/TicTacToe" element={<TicTacToe />} />
         </Routes>
       </globalInfor.Provider>
     </Router>
