@@ -12,7 +12,7 @@ const UseCallBackP = () => {
     }, count1)
     return (
         <div>
-            <UsecallBackC count1={count1} />
+            <UsecallBackC count1={count1} fun={fun} />
             <p>count : {count}</p>
             <button onClick={incr}>click</button>
         </div>

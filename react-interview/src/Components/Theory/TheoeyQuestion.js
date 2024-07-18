@@ -145,6 +145,71 @@ export const TheoeyQuestion = () => {
                     <p>
                         In React, a mixin is a way to reuse code in multiple components. Mixins were more commonly used in earlier versions of React but have since been largely replaced by other patterns like higher-order components (HOCs) and hooks.</p>
                 </li>
+                <li>
+                    <strong>What are the major new features introduced in React 19?</strong>
+                    <p>Ans: </p>
+                    <p>
+                        <p>
+                            React Compiler:
+
+                            Feature: Introduction of a new open-source compiler.
+                            Benefit: Automates many performance optimizations, reducing the need for manual optimization and allowing developers to focus on building features.
+
+                        </p>
+
+                        <p>
+                            Form Actions and State Management:
+                            Features: New APIs like useActionState(), useFormStatus, and useOptimistic().
+                            Benefit: Simplifies managing form states, asynchronous actions, and optimistic UI updates, making state management more intuitive.
+
+                        </p>
+                        <p>
+                            Error Handling in Actions:
+                            Feature: Improved techniques for handling errors in actions.
+                            Benefit: Enhances robustness and reliability of applications by providing better error handling mechanisms.
+                        </p>
+
+                    </p>
+                </li>
+                <li>
+                    <strong>What is concurrent rendering in React 18, and how does it improve the performance of applications?</strong>
+                    <p>Ans: </p>
+                    <p>
+                        Concurrent rendering in React 18 enhances the performance of applications by allowing React to manage multiple tasks simultaneously, prioritizing urgent updates, and breaking down rendering tasks into manageable chunks. This results in smoother, more responsive applications, particularly for those with complex UIs or heavy computational requirements.</p>
+                </li>
+                <li>
+                    <strong>Explain the concept of automatic batching in React 18.</strong>
+                    <p>Ans: </p>
+                    <p>
+                        Batching in React is the process of grouping multiple state updates into a single re-render for performance optimization. Before React 18, batching was limited to event handlers, meaning only updates within event handlers were batched together to trigger a single render.</p>
+                </li>
+                <li>
+                    <strong> What is the Transition API in React 18, and how is it used?</strong>
+                    <p>Ans: </p>
+                    <p>
+                        React 18 introduces concurrent rendering, which allows React to work on multiple tasks simultaneously. This helps keep the UI responsive even during heavy updates..</p>
+                    <p>
+                        Using the Transition API, developers can mark certain state updates as transitions. Transitions are considered non-urgent updates that can be interrupted and delayed in favor of more urgent updates (e.g., user input).
+                    </p>
+                </li>
+                <li>
+                    <strong>How has Suspense been improved in React 18?</strong>
+                    <p>Ans: </p>
+                    <p>
+                        Suspense has been enhanced to better handle asynchronous operations, making user experiences smoother and improving developer productivity.</p>
+                    <p>
+                        Concurrent Features: React 18 introduces concurrent rendering, allowing Suspense to work more efficiently by deferring non-urgent updates and prioritizing urgent ones. This helps keep the UI responsive.
+                    </p>
+                    <p>
+                        Automatic Batching: Updates are now batched automatically within the same event, reducing the number of re-renders and improving performance.
+                    </p>
+                    <p>
+                        Suspense for Data Fetching:
+
+                        Server-Side Rendering (SSR): Suspense can now be used for data fetching on the server side, allowing React to wait for data to be fetched before rendering the component tree. This helps in rendering fully hydrated pages.
+                        Concurrent Server Rendering: React 18 introduces a new SSR architecture that supports streaming, allowing Suspense to progressively send HTML to the client as components are ready.
+                    </p>
+                </li>
             </ol>
         </div>
     )

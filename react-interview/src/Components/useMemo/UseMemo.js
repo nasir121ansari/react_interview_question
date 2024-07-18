@@ -21,6 +21,7 @@ const UseMemo = () => {
     return (
         <div>
             <button onClick={onIncr}>incr {incr}</button>
+            {/* <span>{even() ? "even" : "odd"}</span> */}
             <span>{even ? "even" : "odd"}</span>
             <button onClick={onDecr}>decr {decr}</button>
         </div>
