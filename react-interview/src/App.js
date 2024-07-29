@@ -15,6 +15,7 @@ import UseMemo from "./Components/useMemo/UseMemo";
 import Counter from "./Components/CustomHook/Counter";
 import CounterComponent from "./Components/UseReducer/CounterComponent";
 import { TicTacToe } from "./Components/tic-tac-toe/TicTacToe";
+import { DynamicDropDwon } from "./Components/dynamicDropDwon/DynamicDropDwon";
 
 function Home() {
   return (
@@ -64,6 +65,9 @@ function Home() {
         <li>
           <Link to="/TicTacToe">Tic-Tac-Toe</Link>
         </li>
+        <li>
+          <Link to="/DynamicDropDown">Dynamic DropDown</Link>
+        </li>
       </ol>
     </div>
   );
@@ -89,6 +93,7 @@ function App() {
           <Route path="/CustomHook" element={<Counter />} />
           <Route path="/UseReducerHook" element={<CounterComponent />} />
           <Route path="/TicTacToe" element={<TicTacToe />} />
+          <Route path="/DynamicDropDown" element={<DynamicDropDwon />} />
         </Routes>
       </globalInfor.Provider>
     </Router>
