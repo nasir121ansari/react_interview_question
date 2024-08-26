@@ -16,6 +16,7 @@ import Counter from "./Components/CustomHook/Counter";
 import CounterComponent from "./Components/UseReducer/CounterComponent";
 import { TicTacToe } from "./Components/tic-tac-toe/TicTacToe";
 import { DynamicDropDwon } from "./Components/dynamicDropDwon/DynamicDropDwon";
+import StockPrice from "./Components/stock Price/StockPrice";
 
 function Home() {
   return (
@@ -68,6 +69,9 @@ function Home() {
         <li>
           <Link to="/DynamicDropDown">Dynamic DropDown</Link>
         </li>
+        <li>
+          <Link to="/StockPrice">Stock Price</Link>
+        </li>
       </ol>
     </div>
   );
@@ -94,6 +98,7 @@ function App() {
           <Route path="/UseReducerHook" element={<CounterComponent />} />
           <Route path="/TicTacToe" element={<TicTacToe />} />
           <Route path="/DynamicDropDown" element={<DynamicDropDwon />} />
+          <Route path="/StockPrice" element={<StockPrice />} />
         </Routes>
       </globalInfor.Provider>
     </Router>
