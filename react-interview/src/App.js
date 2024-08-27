@@ -17,6 +17,7 @@ import CounterComponent from "./Components/UseReducer/CounterComponent";
 import { TicTacToe } from "./Components/tic-tac-toe/TicTacToe";
 import { DynamicDropDwon } from "./Components/dynamicDropDwon/DynamicDropDwon";
 import StockPrice from "./Components/stock Price/StockPrice";
+import { LoadMore } from "./Components/LoadMore/LoadMore";
 
 function Home() {
   return (
@@ -72,6 +73,9 @@ function Home() {
         <li>
           <Link to="/StockPrice">Stock Price</Link>
         </li>
+        <li>
+          <Link to="/LoadMore">Load more </Link>
+        </li>
       </ol>
     </div>
   );
@@ -99,6 +103,7 @@ function App() {
           <Route path="/TicTacToe" element={<TicTacToe />} />
           <Route path="/DynamicDropDown" element={<DynamicDropDwon />} />
           <Route path="/StockPrice" element={<StockPrice />} />
+          <Route path="/LoadMore" element={<LoadMore />} />
         </Routes>
       </globalInfor.Provider>
     </Router>
