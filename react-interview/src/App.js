@@ -18,6 +18,7 @@ import { TicTacToe } from "./Components/tic-tac-toe/TicTacToe";
 import { DynamicDropDwon } from "./Components/dynamicDropDwon/DynamicDropDwon";
 import StockPrice from "./Components/stock Price/StockPrice";
 import { LoadMore } from "./Components/LoadMore/LoadMore";
+import Parent from "./Components/useImperativeHandle/Parent";
 
 function Home() {
   return (
@@ -76,6 +77,9 @@ function Home() {
         <li>
           <Link to="/LoadMore">Load more </Link>
         </li>
+        <li>
+          <Link to="/ImperativeHandle">ImperativeHandle  </Link>
+        </li>
       </ol>
     </div>
   );
@@ -104,6 +108,7 @@ function App() {
           <Route path="/DynamicDropDown" element={<DynamicDropDwon />} />
           <Route path="/StockPrice" element={<StockPrice />} />
           <Route path="/LoadMore" element={<LoadMore />} />
+          <Route path="/ImperativeHandle" element={<Parent />} />
         </Routes>
       </globalInfor.Provider>
     </Router>

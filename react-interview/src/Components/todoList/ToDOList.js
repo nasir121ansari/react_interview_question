@@ -3,7 +3,6 @@ import React, { useState } from "react";
 export const ToDOList = () => {
   const [notes, setNotes] = useState([]);
   const [input, setInput] = useState('');
-
   const handleOnsubmit = (e) => {
     e.preventDefault();
     if (input.trim() !== '') {
@@ -11,8 +10,6 @@ export const ToDOList = () => {
       setInput(''); // Clear the input field
     }
   };
-
-
   const removeTodo = index => {
     const newTodos = [...notes];
     newTodos.splice(index, 1);
