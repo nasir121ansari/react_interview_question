@@ -19,6 +19,7 @@ import { DynamicDropDwon } from "./Components/dynamicDropDwon/DynamicDropDwon";
 import StockPrice from "./Components/stock Price/StockPrice";
 import { LoadMore } from "./Components/LoadMore/LoadMore";
 import Parent from "./Components/useImperativeHandle/Parent";
+import DigitalWatch from "./Components/Digitalwatch/DigitalWatch";
 
 function Home() {
   return (
@@ -80,6 +81,9 @@ function Home() {
         <li>
           <Link to="/ImperativeHandle">ImperativeHandle  </Link>
         </li>
+        <li>
+          <Link to="/DigitalWatch">DigitalWatch  </Link>
+        </li>
       </ol>
     </div>
   );
@@ -109,6 +113,7 @@ function App() {
           <Route path="/StockPrice" element={<StockPrice />} />
           <Route path="/LoadMore" element={<LoadMore />} />
           <Route path="/ImperativeHandle" element={<Parent />} />
+          <Route path="/DigitalWatch" element={<DigitalWatch />} />
         </Routes>
       </globalInfor.Provider>
     </Router>
