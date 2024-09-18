@@ -4,7 +4,7 @@ const useCustomHook = (initialValue = 0) => {
     let [count, setCount] = useState(initialValue);
 
     const increment = () => setCount(count + 1);
-    const decrement = () => setCount(count = count > 0 ? count - 1 : count);
+    const decrement = () => setCount(prevCount => (prevCount > 0 ? prevCount - 1 : prevCount));
 
     return { count, increment, decrement };
 
