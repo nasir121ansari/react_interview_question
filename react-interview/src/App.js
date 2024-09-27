@@ -20,6 +20,7 @@ import StockPrice from "./Components/stock Price/StockPrice";
 import { LoadMore } from "./Components/LoadMore/LoadMore";
 import Parent from "./Components/useImperativeHandle/Parent";
 import DigitalWatch from "./Components/Digitalwatch/DigitalWatch";
+import SearchFunctinality from "./Components/serchFunctionality/SearchFunctinality";
 
 function Home() {
   return (
@@ -84,6 +85,9 @@ function Home() {
         <li>
           <Link to="/DigitalWatch">DigitalWatch  </Link>
         </li>
+        <li>
+          <Link to="/SearchFunctinality">Search Functinality  </Link>
+        </li>
       </ol>
     </div>
   );
@@ -114,6 +118,7 @@ function App() {
           <Route path="/LoadMore" element={<LoadMore />} />
           <Route path="/ImperativeHandle" element={<Parent />} />
           <Route path="/DigitalWatch" element={<DigitalWatch />} />
+          <Route path="/SearchFunctinality" element={<SearchFunctinality />} />
         </Routes>
       </globalInfor.Provider>
     </Router>
