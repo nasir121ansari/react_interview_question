@@ -21,6 +21,7 @@ import { LoadMore } from "./Components/LoadMore/LoadMore";
 import Parent from "./Components/useImperativeHandle/Parent";
 import DigitalWatch from "./Components/Digitalwatch/DigitalWatch";
 import SearchFunctinality from "./Components/serchFunctionality/SearchFunctinality";
+import ReduxCounter from "./Components/ReduxCounter/ReduxCounter";
 
 function Home() {
   return (
@@ -88,6 +89,10 @@ function Home() {
         <li>
           <Link to="/SearchFunctinality">Search Functinality  </Link>
         </li>
+        <li>
+          <Link to="/ReduxExample">Redux Example</Link>
+        </li>
+        
       </ol>
     </div>
   );
@@ -119,6 +124,7 @@ function App() {
           <Route path="/ImperativeHandle" element={<Parent />} />
           <Route path="/DigitalWatch" element={<DigitalWatch />} />
           <Route path="/SearchFunctinality" element={<SearchFunctinality />} />
+          <Route path="/ReduxExample" element={<ReduxCounter />} />
         </Routes>
       </globalInfor.Provider>
     </Router>
