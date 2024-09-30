@@ -210,6 +210,11 @@ export const TheoeyQuestion = () => {
                         Concurrent Server Rendering: React 18 introduces a new SSR architecture that supports streaming, allowing Suspense to progressively send HTML to the client as components are ready.
                     </p>
                 </li>
+                <li>
+                    <strong>What is Tree shaking?</strong>
+                    <p>Ans: </p>
+                    <p >Tree shaking is a term used in web development, particularly in the context of JavaScript bundlers like Webpack. It refers to the process of eliminating unused code from a codebase to reduce the size of the final bundle that gets sent to the browser. This includes functions, variables, and entire modules that are never used.</p>
+                </li>
             </ol>
         </div>
     )
