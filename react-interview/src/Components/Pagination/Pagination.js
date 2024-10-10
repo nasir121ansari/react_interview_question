@@ -29,7 +29,7 @@ const Pagination = () => {
     return (
         <div className='container'>
             <div className='post_container'>
-                {loading && <p>......loading</p>}
+                {loading && <p className='loading'>......loading</p>}
                 {error && <p>{error}</p>}
                 {
                     data.length > 0 ? (

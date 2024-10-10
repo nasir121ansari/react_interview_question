@@ -21,6 +21,7 @@ import SearchFunctinality from "./Components/serchFunctionality/SearchFunctinali
 import ReduxCounter from "./Components/ReduxCounter/ReduxCounter";
 import Ques20 from "./Components/Que20/Ques20";
 import Pagination from "./Components/Pagination/Pagination";
+import InfiniteScroll from "./Components/infiniteScroll/InfiniteScroll";
 
 function Home() {
   return (
@@ -88,7 +89,9 @@ function Home() {
         <li>
           <Link to="/Pagination">Pagination</Link>
         </li>
-        
+        <li>
+          <Link to="/InfiniteScroll">InfiniteScroll</Link>
+        </li>
       </ol>
     </div>
   );
@@ -120,6 +123,7 @@ function App() {
           <Route path="/ReduxExample" element={<ReduxCounter />} />
           <Route path="/Question20" element={<Ques20 />} />
           <Route path="/Pagination" element={<Pagination />} />
+          <Route path="/InfiniteScroll" element={<InfiniteScroll />} />
 
         </Routes>
       </globalInfor.Provider>
