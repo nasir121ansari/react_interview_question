@@ -2,8 +2,6 @@ import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Fetch_data_from_url from "./Components/fethData/Fetch_data_from_url";
-import { Counter_incr_decr } from "./Components/counter/Counter_incr_decr";
 import { Form } from "./Components/submitForm/Form";
 import { DataPassing } from "./Components/passData/DataPassing";
 import { ConextApi } from "./Components/contextApi/ConextApi";
@@ -18,7 +16,6 @@ import { TicTacToe } from "./Components/tic-tac-toe/TicTacToe";
 import { DynamicDropDwon } from "./Components/dynamicDropDwon/DynamicDropDwon";
 import StockPrice from "./Components/stock Price/StockPrice";
 import { LoadMore } from "./Components/LoadMore/LoadMore";
-import Parent from "./Components/useImperativeHandle/Parent";
 import DigitalWatch from "./Components/Digitalwatch/DigitalWatch";
 import SearchFunctinality from "./Components/serchFunctionality/SearchFunctinality";
 import ReduxCounter from "./Components/ReduxCounter/ReduxCounter";
@@ -30,12 +27,6 @@ function Home() {
     <div className="main-container">
       <h1 className="">React Interview Question</h1>
       <ol>
-        <li>
-          <Link to="/fetch-data">Fetch Data from Url and display that</Link>
-        </li>
-        <li>
-          <Link to="/counter">Counter Increment and Decrement</Link>
-        </li>
         <li>
           <Link to="/form">Create a form and submit</Link>
         </li>
@@ -83,9 +74,6 @@ function Home() {
           <Link to="/LoadMore">Load more </Link>
         </li>
         <li>
-          <Link to="/ImperativeHandle">ImperativeHandle  </Link>
-        </li>
-        <li>
           <Link to="/DigitalWatch">DigitalWatch  </Link>
         </li>
         <li>
@@ -113,8 +101,6 @@ function App() {
       <globalInfor.Provider className="App" value={{ data, setData }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/fetch-data" element={<Fetch_data_from_url />} />
-          <Route path="/counter" element={<Counter_incr_decr />} />
           <Route path="/form" element={<Form />} />
           <Route path="/dataPassing" element={<DataPassing />} />
           <Route path="/contextApi" element={<ConextApi />} />
@@ -129,7 +115,6 @@ function App() {
           <Route path="/DynamicDropDown" element={<DynamicDropDwon />} />
           <Route path="/StockPrice" element={<StockPrice />} />
           <Route path="/LoadMore" element={<LoadMore />} />
-          <Route path="/ImperativeHandle" element={<Parent />} />
           <Route path="/DigitalWatch" element={<DigitalWatch />} />
           <Route path="/SearchFunctinality" element={<SearchFunctinality />} />
           <Route path="/ReduxExample" element={<ReduxCounter />} />
