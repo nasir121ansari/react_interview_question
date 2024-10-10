@@ -23,6 +23,7 @@ import DigitalWatch from "./Components/Digitalwatch/DigitalWatch";
 import SearchFunctinality from "./Components/serchFunctionality/SearchFunctinality";
 import ReduxCounter from "./Components/ReduxCounter/ReduxCounter";
 import Ques20 from "./Components/Que20/Ques20";
+import Pagination from "./Components/Pagination/Pagination";
 
 function Home() {
   return (
@@ -96,6 +97,9 @@ function Home() {
         <li>
           <Link to="/Question20">Question20</Link>
         </li>
+        <li>
+          <Link to="/Pagination">Pagination</Link>
+        </li>
         
       </ol>
     </div>
@@ -130,6 +134,8 @@ function App() {
           <Route path="/SearchFunctinality" element={<SearchFunctinality />} />
           <Route path="/ReduxExample" element={<ReduxCounter />} />
           <Route path="/Question20" element={<Ques20 />} />
+          <Route path="/Pagination" element={<Pagination />} />
+
         </Routes>
       </globalInfor.Provider>
     </Router>
