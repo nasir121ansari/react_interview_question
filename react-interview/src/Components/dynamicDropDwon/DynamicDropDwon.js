@@ -1,25 +1,17 @@
 import React, { useState } from 'react'
 
 export const DynamicDropDwon = () => {
-    const [selectedParent, setSelectedParent] = useState('');
-    const [selecteChild, setSelectedChild] = useState('');
     const data = {
         c1: ['c1-child1', 'c1-child2', 'c1-child3'],
         c2: [],
         c3: ['c3-child1', 'c3-child2']
     };
-
-
+    const [selectedParent, setSelectedParent] = useState('');
     const handleParentChange = (e) => {
         setSelectedParent(e.target.value);
-        setSelectedChild('')
     }
-    const handleChildChange = (event) => {
-        setSelectedChild(event.target.value);
-    };
     return (
         <div>
-
             <div>
                 <label>Parent DropDwon</label>
                 <select value={selectedParent} onChange={handleParentChange}>
@@ -38,7 +30,7 @@ export const DynamicDropDwon = () => {
             {selectedParent && data[selectedParent].length > 0 && (
                 <div>
                     <label htmlFor="child-dropdown">Child Dropdown: </label>
-                    <select value={selecteChild} onChange={handleChildChange}>
+                    <select>
                         <option value="">Select an option</option>
                         {data[selectedParent].map((child, index) => (
                             <option key={index} value={child}>
