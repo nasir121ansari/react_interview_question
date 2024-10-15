@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Ques201 from './Ques201';
 
 // Each element in the array is an object with two fields "task" and "subtasks". 
 // The "task" field is associated with a string description and the "subtasks" field is associated with an array of string descriptions.
@@ -68,6 +69,9 @@ const Ques20 = () => {
           )
         })
       }
+
+      <h1>Using Api</h1>
+      <Ques201></Ques201>
     </div>
   )
 }
