@@ -146,6 +146,18 @@ export const TheoeyQuestion = () => {
                         In React, a mixin is a way to reuse code in multiple components. Mixins were more commonly used in earlier versions of React but have since been largely replaced by other patterns like higher-order components (HOCs) and hooks.</p>
                 </li>
                 <li>
+                    <strong>what is babel and webpack?</strong>
+                    <p>Ans: </p>
+                    <p>
+                    Babel is used to transpile the JavaScript code, making it compatible with older browsers, while Webpack is used to bundle and optimize the code.</p>
+                </li>
+                <li>
+                    <strong>what is reconciliation in react?</strong>
+                    <p>Ans: </p>
+                    <p>
+                    Reconciliation is the process of comparing the previous state of the DOM with the new state, identifying the differences, and updating only the necessary parts to reflect the changes. The diffing algorithm is a core part of this reconciliation process in React..</p>
+                </li>
+                <li>
                     <strong>What are the major new features introduced in React 19?</strong>
                     <p>Ans: </p>
                     <p>
