@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Children } from "./Children";
+import Children  from "./Children";
 
 // passing data from parent to child
 // export const DataPassing = () => {
@@ -12,7 +12,7 @@ import { Children } from "./Children";
 //   );
 // };
 
-export const DataPassing = () => {
+ const DataPassing = () => {
   const [data, setData] = useState();
 
   const parentFunction = (data) => {
@@ -25,3 +25,6 @@ export const DataPassing = () => {
     </div>
   );
 };
+
+
+export default DataPassing

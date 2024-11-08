@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { globalInfor } from "../../App";
-export const ConextApi = () => {
+ const ConextApi = () => {
   const { data, setData } = useContext(globalInfor);
   console.log("ConextApi", data);
   return (
@@ -12,3 +12,5 @@ export const ConextApi = () => {
     </div>
   );
 };
+
+export default ConextApi;

@@ -1,6 +1,5 @@
 import React from 'react'
-
-export const TheoeyQuestion = () => {
+const TheoeyQuestion = () => {
     return (
         <div>
             <ol>
@@ -158,6 +157,12 @@ export const TheoeyQuestion = () => {
                     Reconciliation is the process of comparing the previous state of the DOM with the new state, identifying the differences, and updating only the necessary parts to reflect the changes. The diffing algorithm is a core part of this reconciliation process in React..</p>
                 </li>
                 <li>
+                    <strong>what is react fiber?</strong>
+                    <p>Ans: </p>
+                    <p>
+                    React Fiber enhances the reconciliation process by breaking down the update process into smaller units of work. This allows React to pause and resume work, handle high-priority updates first, and avoid blocking the main thread.</p>
+                </li>
+                <li>
                     <strong>What are the major new features introduced in React 19?</strong>
                     <p>Ans: </p>
                     <p>
@@ -231,3 +236,5 @@ export const TheoeyQuestion = () => {
         </div>
     )
 }
+
+export default TheoeyQuestion

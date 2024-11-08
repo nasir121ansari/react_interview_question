@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export const LoadMore = () => {
+const LoadMore = () => {
 
   const [firstFact, setFirstFact] = useState(''); 
   const [additionalFacts, setAdditionalFacts] = useState([]); 
@@ -32,3 +32,5 @@ export const LoadMore = () => {
     </div>
   )
 }
+
+export default LoadMore

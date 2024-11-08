@@ -67,3 +67,5 @@ export const LifeCycle = () => {
     )
 }
 
+export default LifeCycle
+

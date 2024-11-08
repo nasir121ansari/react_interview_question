@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const initialBoard = Array(9).fill(null);
 
-export const TicTacToe = () => {
+const TicTacToe = () => {
     const [board,setBoard] = useState(initialBoard)
     const [isNext, setIsNext] = useState(true);
     const [winner, setWinner] = useState(null);
@@ -42,7 +42,7 @@ export const TicTacToe = () => {
    };
    const handleReset = () => {
      setWinner(null)
-     setBoard(initialboard)
+     setBoard(initialBoard)
      setIsNext(true)
    }
      return (
@@ -65,3 +65,6 @@ export const TicTacToe = () => {
        </div>
      );
 }
+
+
+export default TicTacToe

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-
-export const DynamicDropDwon = () => {
+const DynamicDropDwon = () => {
     const data = {
         c1: ['c1-child1', 'c1-child2', 'c1-child3'],
         c2: [],
@@ -44,4 +43,7 @@ export const DynamicDropDwon = () => {
         </div>
     )
 }
+
+
+export default DynamicDropDwon
 

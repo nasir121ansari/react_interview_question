@@ -13,7 +13,7 @@ import React, { useState } from "react";
 // };
 
 // children to parent
-export const Children = (props) => {
+const Children = (props) => {
   const data = "coming from children";
   return (
     <div>
@@ -23,3 +23,5 @@ export const Children = (props) => {
     </div>
   );
 };
+
+export default Children
