@@ -1,45 +1,67 @@
 import React, { useState } from 'react'
 const DynamicDropDwon = () => {
     const data = {
-        c1: ['c1-child1', 'c1-child2', 'c1-child3'],
-        c2: [],
-        c3: ['c3-child1', 'c3-child2']
+        India: {
+            Delhi: ['New Delhi', 'Rohini', 'Dwarka'],
+            Maharashtra: ['Mumbai', 'Pune', 'Nagpur']
+        },
+        USA: {
+            California: ['Los Angeles', 'San Francisco', 'San Diego'],
+            Texas: ['Houston', 'Austin', 'Dallas']
+        }
     };
-    const [selectedParent, setSelectedParent] = useState('');
-    const handleParentChange = (e) => {
-        setSelectedParent(e.target.value);
+    const [selectedCounrty, setSelectedCounrty] = useState(null)
+    const [selectedState, setSelectedState] = useState(null)
+    const handleCountryChange = (e) => {
+        setSelectedCounrty(e.target.value)
+        setSelectedState(null)
+    }
+    const handleStateChange = (e) => {
+        setSelectedState(e.target.value)
     }
     return (
         <div>
-            <div>
-                <label>Parent DropDwon</label>
-                <select value={selectedParent} onChange={handleParentChange}>
-                    <option value="">Select option</option>
-                    {
-                        Object.keys(data).map((key) => {
-                            return (
-                                <option value={key} key={key}>
-                                    {key}
-                                </option>
-                            )
-                        })
-                    }
-                </select>
-            </div>
-            {selectedParent && data[selectedParent].length > 0 && (
-                <div>
-                    <label htmlFor="child-dropdown">Child Dropdown: </label>
-                    <select>
-                        <option value="">Select an option</option>
-                        {data[selectedParent].map((child, index) => (
-                            <option key={index} value={child}>
-                                {child}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            )}
+            <select onChange={handleCountryChange}>
+                <option>Select</option>
+                {
+                    Object.keys(data).map((country) => {
+                        return (
+                            <option key={country} value={country}>{country}</option>
+                        )
+                    })
+                }
 
+            </select>
+            {
+                selectedCounrty && (
+                    <select onChange={handleStateChange}>
+                        <option>Select</option>
+                        {
+                            Object.keys(data[selectedCounrty]).map((state) => {
+                                return (
+                                    <option key={state} value={state}>{state}</option>
+                                )
+                            })
+                        }
+
+                    </select>
+                )
+            }
+            {
+                selectedState && (
+                    <select >
+                        <option>Select</option>
+                        {
+                            data[selectedCounrty][selectedState].map((city) => {
+                                return (
+                                    <option key={city} value={city}>{city}</option>
+                                )
+                            })
+                        }
+
+                    </select>
+                )
+            }
         </div>
     )
 }
