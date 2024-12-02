@@ -57,6 +57,27 @@ function Home() {
 
 export const globalInfor = createContext();
 
+const folders = {
+  DNEG: {},
+  Lionsgate: {
+    Audio: { test: {} },
+    "Best Selling Promo": {},
+    "For Review": {},
+    Graphics: {},
+    Idents: {},
+    Output: {},
+    Projects: {},
+    "Rough Cuts": {},
+    Source: {},
+    TX: {},
+  },
+  Paramount: { para: [1, 2, 3] },
+  JIO: { jio1: ["a", "bc"] },
+  Live: {},
+  Shows: {},
+  Movies: {},
+};
+
 function App() {
   const [data, setData] = useState("data coming from app.js");
 
@@ -78,7 +99,7 @@ function App() {
             <Route path="/CustomHook" element={<Counter />} />
             <Route path="/UseReducerHook" element={<CounterComponent />} />
             <Route path="/TicTacToe" element={<TicTacToe />} />
-            <Route path="/DynamicDropDown" element={<DynamicDropDwon />} />
+            <Route path="/DynamicDropDown" element={<DynamicDropDwon data={folders}/>} />
             <Route path="/StockPrice" element={<StockPrice />} />
             <Route path="/LoadMore" element={<LoadMore />} />
             <Route path="/DigitalWatch" element={<DigitalWatch />} />
