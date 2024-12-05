@@ -2,6 +2,8 @@ import React, { createContext, useState, lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import SlideShow from "./Components/IamgeSlider/SlideShow";
+import Weather from "./Components/Weather/Weather";
 
 // Lazy loading each component to improve performance
 const Form = lazy(() => import("./Components/submitForm/Form"));
@@ -50,6 +52,8 @@ function Home() {
         <li><Link to="/Question20">Question 20</Link></li>
         <li><Link to="/Pagination">Pagination</Link></li>
         <li><Link to="/InfiniteScroll">Infinite Scroll</Link></li>
+        <li><Link to="/IamgeSilder">Iamge Silder</Link></li>
+        <li><Link to="/Weather">Weather</Link></li>
       </ol>
     </div>
   );
@@ -108,6 +112,9 @@ function App() {
             <Route path="/Question20" element={<Ques20 />} />
             <Route path="/Pagination" element={<Pagination />} />
             <Route path="/InfiniteScroll" element={<InfiniteScroll />} />
+            <Route path="/IamgeSilder" element={<SlideShow />} />
+            <Route path="/Weather" element={<Weather />} />
+            
           </Routes>
         </Suspense>
       </globalInfor.Provider>
